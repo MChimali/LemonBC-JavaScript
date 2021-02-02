@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="document-title">
+        <h2>Listado de hoteles</h2>
+    </div>
+    <div class="hotel-list">
+        <div class="hotel-item">
+            <div class="hotel-selector">
+                <input id="hotel1"type="checkbox">
+                <label class="shopping-selection-text" for="hotel1">click here to select this hotel</label>
+            </div>
+            <div class="hotel-entry">
+                <span class="hotel-name">gran melia</span>
+                <span class="hotel-address">Urbanización Novo Sancti Petri s/n
+                    11130 Chiclana de la Frontera-Cádiz</span>
+            </div>
+            <div class="hotel-description-container">
+                <span class="hotel-description">Gran Meliá Hotels and Resorts ofrece una calidad atemporal y
+                     un encanto sofisticado en los destinos más atractivos del mundo.</span>                
+            </div>
+            <div class="hotel-contact">
+                <span class="hotel-number">0034 954-53-59-95</span>
+                <span class="hotel-link"><a href="https://www.melia.com/es/hoteles/espana/cadiz/gran-melia-sancti-petri/index.htm">Gran Meliá Sancti Petri</a></span>
+            </div>
+            <div class="hotel-reviews">
+                <span class="hotel-star">&#9734;&#9734;&#9734;&#9734;&#9734;</span>
+            </div>
+        </div>
+        <div class="hotel-item">
+            <div class="hotel-selector">
+                <input id="hotel2"type="checkbox">
+                <label class="shopping-selection-text" for="hotel2">click here to select this hotel</label>
+            </div>
+            <div class="hotel-entry">
+                <span class="hotel-name">Hotel Riu</span>
+                <span class="hotel-address"> H/CA/1088 - Urb. Loma del Puerco, Chiclana - Cádiz</span>
+            </div>
+            <div class="hotel-description-container">
+                <span class="hotel-description">El Hotel Riu Chiclana es un hotel en Chiclana todo incluido 24 horas 
+                    que se encuentra ubicado a tan sólo 200 m. de la playa La Barrosa, en plena Costa de la Luz.</span>                
+            </div>
+            <div class="hotel-contact">
+                <span class="hotel-number">0034 954-20-80-80</span>
+                <span class="hotel-link"><a href="https://www.riu.com/en/hotel/spain/cadiz-chiclana/clubhotel-riu-chiclana/">Hotel Riu - Chiclana</a></span>
+            </div>
+            <div class="hotel-reviews">
+                <span class="hotel-star">&#9734;&#9734;&#9734;&#9734;&#9734;</span>
+            </div>
+        </div>
+        <div class="hotel-item">
+            <div class="hotel-selector">
+                <input id="hotel3"type="checkbox">
+                <label class="shopping-selection-text" for="hotel3">click here to select this hotel</label>
+            </div>
+            <div class="hotel-entry">
+                <span class="hotel-name">APARTHOTEL ILUNION</span>
+                <span class="hotel-address">Carretera Loma de Sancti Petri, s/n, 11139, Cádiz</span>
+            </div>
+            <div class="hotel-description-container">
+                <span class="hotel-description">Disfruta de nuestro apartahotel en Chiclana con todo incluido y 
+                    planea tu descanso en las hermosas playas de Cádiz..</span>                
+            </div>
+            <div class="hotel-contact">
+                <span class="hotel-number">0034 954-81-82-83</span>
+                <span class="hotel-link"><a href="https://en.ilunionsanctipetri.com/">Aparta-hotel Ilunion</a></span>
+            </div>
+            <div class="hotel-reviews">
+                <span class="hotel-star">&#9734;&#9734;&#9734;&#9734;&#9734;</span>
+            </div>
+        </div>
+        <div class="hotel-item">
+            <div class="hotel-selector">
+                <input id="hotel4"type="checkbox">
+                <label class="shopping-selection-text" for="hotel4">click here to select this hotel</label>
+            </div>
+            <div class="hotel-entry">
+                <span class="hotel-name">Hotel Aroma de Mar</span>
+                <span class="hotel-address">Calle Boquerón 3, 11139 - Novo Sancti Petri - La Barrosa -
+                    Chiclana de la Frontera, Cádiz</span>
+            </div>
+            <div class="hotel-description-container">
+                <span class="hotel-description">Hotel Aroma de Mar se encuentra situado en un emplazamiento único frente a la playa. 
+                    Las localizaciones más importantes de la ciudad, a un paso del hotel.</span>                
+            </div>
+            <div class="hotel-contact">
+                <span class="hotel-number">0034 954-53-59-95</span>
+                <span class="hotel-link"><a href="https://www.hotelaromademar.com/">Hotel Aroma de Mar</a></span>
+            </div>
+            <div class="hotel-reviews">
+                <span class="hotel-star">&#9734;&#9734;&#9734;&#9734;&#9734;</span>
+            </div>
+        </div>
+    </div>
+    <div class="contact-form">
+        <div class="contact-form-title">
+            <h2>Si deseas recibir más información sobre los hoteles seleccionados, no dudes en rellenar este formulario</h2>
+        </div>
+        <form action="/my-handling-form-page" class="form" method="post"> 
+            <ul class="test">
+                <li class="form-element">
+                    <label class="hotel-form-label" for="name">Nombre:</label>
+                    <input class="hotel-form-field" type="text" id="name" name="user_name">
+                </li>
+                <li class="form-element">
+                    <label class="hotel-form-label" for="mail">Correo electrónico:</label>
+                    <input class="hotel-form-field" type="email" id="mail" name="user_mail">
+                </li>
+                <li class="form-element">
+                    <label class="hotel-form-label" for="msg">Mensaje:</label>
+                    <textarea class="hotel-form-field" id="msg" name="user_message"></textarea>
+                </li>
+            </ul>
+        </form>  
+    </div>
+</body>
+</html>
