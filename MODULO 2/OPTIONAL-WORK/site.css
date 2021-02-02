@@ -1,0 +1,56 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.info-container{
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    padding: 0px;
+}
+.hotel-info{
+    width: 48%;
+    float: left;
+    border:1px solid lightgray;
+    border-radius: 10px;
+    margin-right:20px;
+    background:rgb(233, 233, 233);
+}
+.hotel-review {
+    margin-left: 50%;
+    padding: 30px 20px 30px 20px;
+    border:1px solid lightgray;
+    border-radius: 10px;
+    background:rgb(233, 233, 233);
+}
+.review-score{
+    padding-bottom:20px;
+    margin-bottom:20px;
+    border-bottom: 1px solid lightgrey;
+}
+.input-container{
+    width:100%;
+ 
+}
+.hotel-input{
+    width:50%;
+    float:left;
+    padding: 50px 20px 50px 20px;
+}
+.hotel-image{
+    padding: 50px 20px 50px 20px;
+}
+.hotel-name, .hotel-location{
+    margin-top:0px;
+    font-size: 14px;
+}
+.hotel-name{
+    font-weight: 800;
+    font-size: 18px;
+}
+.image{
+    width:300px;
+}
+.customer-review{
+    font-weight: bold;
+    color:rgb(201, 183, 21)
+}
