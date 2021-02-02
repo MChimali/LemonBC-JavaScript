@@ -1,0 +1,55 @@
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;;
+}
+.container{
+    width:50%;
+    margin:auto;
+}
+.field{
+    width:100%;
+    border: 1px solid #b6b6b6;
+    margin: 2px 0px 10px 0px;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box; 
+    
+}
+
+.field:focus{
+    outline: 2px solid #FE051B;
+}
+.image{
+    text-align:center;
+}
+.myimage{
+    width:50%;
+}
+.buttons{
+    padding-top:25px;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:30px;
+    }
+    
+.mybutton{
+    padding:10px 30px 10px 30px;
+    background: #18B3AB;
+}
+.important{
+    display:inline;
+    font-weight: 900;
+}
+.mybutton:active{
+background: #cafffc;
+outline: 2px solid #FE051B;
+}
+
+.myconsole-button{
+    width:100%;
+    background-color: #ff6d79;
+    outline:none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.consola-text{
+    font-weight: 800;
+}
