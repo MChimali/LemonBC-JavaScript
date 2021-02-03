@@ -74,6 +74,7 @@ function calculateTotal () {
     console.log("Tipo de habitación escogida: " + room() );
     console.log("Disfrute Spa durante estancia: " + spaVariant() );
     console.log("Tipo de Ocupación: " + ocupation() + '\n')
+    console.log("");
     console.log("Precio por noche según opciones: " + nightPrice() + " euros")
     console.log("Precio total por " + nights() + " noches: " + calculateTotalNights() + " euros" )
     console.log("Precio total por el parking: " + parkingPrice() + " euros" )
