@@ -60,7 +60,8 @@ cleanInput();
 function handleEqual() {
     //the following line is to do not allow the Switch to be activated once the function Calculation is activated
     operationString = "";
-    calculation();               
+    calculation(); 
+    document.getElementById("result").innerHTML = result;            
 }
 
 

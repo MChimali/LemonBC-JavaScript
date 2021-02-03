@@ -1,0 +1,37 @@
+#field{
+    width:188px;
+    height:50px;
+    margin-bottom: 4px;
+    text-align: right;
+    font-size: 30px;
+    background: rgb(255, 233, 233);
+}
+
+#row{
+    width:200px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:4px;
+}
+button{
+    width:50px;
+    margin-right:4px;
+    height:35px;
+    border-radius: 0px;
+    border: 0px;
+}
+button[id*='number']{
+    background:rgb(255, 195, 203);
+    color: white;
+    font-weight:500
+}
+button[id*='ion'], button[id*='0'] {
+    background:rgb(199, 118, 128);
+    color: white;
+    font-weight:500
+}
+#equals, #CE{
+    background:rgb(199, 118, 128);
+    color: white;
+    font-weight:500
+}
