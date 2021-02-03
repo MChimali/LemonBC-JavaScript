@@ -68,6 +68,8 @@ function calculateTotalNights() {
 function calculateTotalstay() {
     return calculateTotalNights() + parkingPrice();
 }
+
+//handler to get the info in the console
 function calculateTotal () {
     console.log("Tipo de habitación escogida: " + room() );
     console.log("Disfrute Spa durante estancia: " + spaVariant() );
