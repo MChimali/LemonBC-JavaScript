@@ -2,8 +2,8 @@
 var room = () => document.getElementById('room-type').options[document.getElementById('room-type').selectedIndex].value;
 
 //function to get price of the room
-function roomPrice(){
-    switch(room()){
+function roomPrice() {
+    switch(room()) {
         case "Standard":
             priceOfRoom = 100;
             break;
@@ -21,11 +21,11 @@ function roomPrice(){
 var spa = () => document.getElementById("spa").checked;
 
 //function to get spa price
-function spaPrice() { return priceOfSpa = spa()===true? 20 : 0;
+function spaPrice() { return priceOfSpa = spa() === true ? 20 : 0;
 };
 
 //Console log for showing if Spa is selected
-function spaVariant() { return optionalSpa = spa()===true? "Sí" : "No"};
+function spaVariant() { return optionalSpa = spa() === true ? "Sí" : "No"};
 
 //function to get number of ocupation
 var ocupation = () => document.getElementById('ocupation').options[document.getElementById('ocupation').selectedIndex].value;
@@ -58,11 +58,11 @@ function nightPrice(){
 var parkingDays = () => Number(document.getElementById("days-parking").value);
 
 //function to get parking price
-var parkingPrice = () => parkingDays()*10;
+var parkingPrice = () => parkingDays() * 10;
 
 //function to get price per stay
 function calculateTotalNights() {
-    return nightPrice()*nights()
+    return nightPrice() * nights()
 }
 //function to get total price
 function calculateTotalstay() {
