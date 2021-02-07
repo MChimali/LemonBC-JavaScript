@@ -1,0 +1,9 @@
+.product{
+    padding:20px;
+    border:1px solid grey;
+    border-radius: 20px;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:10px;
+    background:rgb(229, 238, 255);
+}
