@@ -8,21 +8,86 @@
     <title>Document</title>
 </head>
 <body>
-    <h1></h1>
-    <div class="product" id="product1">
-        <div class="product-entry">
-            <span class="product-id" id="id1"></span>
-            <span class="product-name" id="name1"></span>
+    <div class="product-list">
+        <div class="product-item" id="product1">
+            <div class="product-entry">
+                <span class="item-number">1.</span>
+                <span class="product-name" id="name1"></span>
+                <span class="product-id" id="id1"></span>                
+            <div class="premium">
+               <label id="prime1" class="premium-text"></label>
+            </div>
+            </div>
+            <div class="product-total" id="product1">
+                <label class="label-count" for="count1">Quantity</label>                
+                <input class="input-count" type="text" name="" id="count1">               
+                <span class="product-price" id="price1">50 euros</span>  
+                <span class="price-unit-text" >(per unit)</span> 
+                <span class="product-price" id="total1">50 euros</span>  
+                <span class="price-unit-text" >(total producto)</span>                           
+            </div>                        
         </div>
-        <div class="product-total">
-            <span class="product-price" id="price1"></span>
-            <span class="product-count" id="count1"></span>              
+        <div class="product-item" id="product2">
+            <div class="product-entry">
+                <span class="item-number">2.</span>
+                <span class="product-name" id="name2"></span>
+                <span class="product-id" id="id2"></span>                
+            <div class="premium">
+               <label id="prime2" class="premium-text"></label>
+            </div>
+            </div>
+            <div class="product-total" id="product2">
+                <label class="label-count" for="count2">Quantity</label>                
+                <input class="input-count" type="text" name="" id="count2">               
+                <span class="product-price" id="price2">50 euros</span>  
+                <span class="price-unit-text" >(per unit)</span> 
+                <span class="product-price" id="total2">50 euros</span>  
+                <span class="price-unit-text" >(total producto)</span>                           
+            </div>                        
         </div>
-        <div class="product-premium">
-            <input id="premium1" type="checkbox">
-            <label class="shopping-selection-text" for="premium1"></label>
-        </div>        
+        <div class="product-item" id="product3">
+            <div class="product-entry">
+                <span class="item-number">3.</span>
+                <span class="product-name" id="name3"></span>
+                <span class="product-id" id="id3"></span>                
+            <div class="premium">
+               <label id="prime3" class="premium-text"></label>
+            </div>
+            </div>
+            <div class="product-total" id="product3">
+                <label class="label-count" for="count3">Quantity</label>                
+                <input class="input-count" type="text" name="" id="count3">               
+                <span class="product-price" id="price3">50 euros</span>  
+                <span class="price-unit-text" >(per unit)</span> 
+                <span class="product-price" id="total3">50 euros</span>  
+                <span class="price-unit-text" >(total producto)</span>                           
+            </div>                        
+        </div>
+        <div class="product-item" id="product4">
+            <div class="product-entry">
+                <span class="item-number">4.</span>
+                <span class="product-name" id="name4"></span>
+                <span class="product-id" id="id4"></span>                
+            <div class="premium">
+               <label id="prime4" class="premium-text"></label>
+            </div>
+            </div>
+            <div class="product-total" id="product4">
+                <label class="label-count" for="count4">Quantity</label>                
+                <input class="input-count" type="text" name="" id="count4">               
+                <span class="product-price" id="price4">50 euros</span>  
+                <span class="price-unit-text" >(per unit)</span> 
+                <span class="product-price" id="total4">50 euros</span>  
+                <span class="price-unit-text" >(total producto)</span>                           
+            </div>                        
+        </div>
+        <div class="total-item">
+            <p class="total-price" id="total-sentence">Precio total: <span id="total-number"></span></p> 
+            <p class="discount" id="discount-total">50 euros</p>
+            <p class="prime-message" id="prime-message">50 euros</p>                      
+        </div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>

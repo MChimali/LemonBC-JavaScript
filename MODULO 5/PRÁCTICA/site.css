@@ -1,9 +1,76 @@
-.product{
-    padding:20px;
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.product-item{    
+    padding:10px;
     border:1px solid grey;
-    border-radius: 20px;
+    border-radius: 0px;
     display:flex;
     justify-content: space-between;
     margin-bottom:10px;
     background:rgb(229, 238, 255);
+}
+.product-list{
+    width: 60%;
+}
+@media (max-width:960px){
+    .product-list{
+        width: 70%;
+    }
+}
+
+.input-count{
+    width: 20px;
+    text-align: center;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+.prime{
+    margin: 10px 5px 5px 0px;
+}
+.product-price{
+    padding-left: 30px;
+}
+.price-unit-text{
+    
+    margin-top: 30px;
+    font-size: 12px;
+    font-style: italic;
+}
+.product-id{
+color:rgb(173, 173, 173);
+font-size:12px;
+}
+.premium-text{
+    color:rgb(0, 0, 0);
+    font-weight: 900;
+}
+.label-count{
+    font-size: 13px;
+    color:rgb(173, 173, 173);
+}
+.total-item{
+    padding:10px;
+    border:1px solid grey;
+    border-radius: 0px;
+    margin-bottom:10px;
+    background:rgb(174, 202, 255);
+    text-align: right;
+}
+.total-price{
+    margin: 5px 0px 10px 0px;
+}
+
+.discount, .prime-message{
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-size:18px;
+}
+#total-number{
+    font-size: 17px;
+    color: rgb(89, 89, 255);
+    font-weight: 900;
 }
