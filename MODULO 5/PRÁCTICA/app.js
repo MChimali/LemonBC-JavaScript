@@ -164,6 +164,8 @@ function discountHtml(){
     }
 }
 
+//We create function to show message of shipping included according to condition of all items being prime
+
 function primeHtml(){
     if(allPrime){
         return "Pedido sin gastos de envío :-)"
