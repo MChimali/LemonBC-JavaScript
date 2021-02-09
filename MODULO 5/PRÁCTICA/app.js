@@ -75,7 +75,7 @@ showTotal(total);
 console.log("-------------------------------------")
 
 //    4    // Filtrar por los productos que sean prime.
-//We simply use the type of variable of Premium (true/false) to create a condition and then print
+//We simply use the type of variable of Premium (boolean) to create a condition and then print
 for (i = 0; i < carrito.length; i++) {
     if(carrito[i].premium){    
     imprimir (carrito[i]);}
