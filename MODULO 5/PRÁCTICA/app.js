@@ -124,7 +124,9 @@ function showDiscount(){
 
 showDiscount();
 
-//   7    // Crreate array with the id of HTML elements to relate with carrito array
+//   7    // Show the buying list with a basic HTML
+
+//We firstly create an array with all relevant ID tags from html. 
 
 const htmlElements = [
     {id: "id1", name: "name1", count: "count1", price: "price1", total: "total1", input: "prime1"},
@@ -135,7 +137,7 @@ const htmlElements = [
     
 ];
 
-//We relate the carrito properties with the DOM to show carrito in browser
+//We relate the carrito properties with the DOM tags to show carrito in browser
 
 for (i = 0; i < htmlElements.length; i++) {
 document.getElementById(htmlElements[i].id).innerHTML = "ID: (" + carrito[i].id + ")";
