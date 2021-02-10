@@ -124,46 +124,40 @@ function showDiscount(){
 
 showDiscount();
 
-//   7    // Crreate array with the id of HTML elements to relate with carrito array
-
-const htmlElements = [
-    {id: "id1", name: "name1", count: "count1", price: "price1", total: "total1", input: "prime1"},
-    {id: "id2", name: "name2", count: "count2", price: "price2", total: "total2", input: "prime2"},
-    {id: "id3", name: "name3", count: "count3", price: "price3", total: "total3", input: "prime3"},
-    {id: "id4", name: "name4", count: "count4", price: "price4", total: "total4", input: "prime4"},
-   
-    
-];
+//   7    // Show carrito through HTML
 
 //We relate the carrito properties with the DOM to show carrito in browser
 
-for (i = 0; i < htmlElements.length; i++) {
-document.getElementById(htmlElements[i].id).innerHTML = "ID: (" + carrito[i].id + ")";
-document.getElementById(htmlElements[i].name).innerHTML = carrito[i].name;
-document.getElementById(htmlElements[i].price).innerHTML = carrito[i].price;
-document.getElementById(htmlElements[i].total).innerHTML = (carrito[i].price*carrito[i].count).toFixed(2);
-document.getElementById(htmlElements[i].count).value = carrito[i].count;
-if (carrito[i].premium){
-document.getElementById(htmlElements[i].input).innerHTML = "Premium Item";
-}else{document.getElementById(htmlElements[i].input).style.display = "none";
-}};
+for (i = 0; i < carrito.length; i++) {
+    
+    var html = (i + 1).toString()
+
+    document.getElementById("id" + html).innerHTML = "ID: (" + carrito[i].id + ")";
+    document.getElementById("name" + html).innerHTML = carrito[i].name;
+    document.getElementById("price" + html).innerHTML = carrito[i].price;
+    document.getElementById("total" + html).innerHTML = (carrito[i].price*carrito[i].count).toFixed(2);
+    document.getElementById("count" + html).value = carrito[i].count;
+    if (carrito[i].premium){
+        document.getElementById("prime" + html.toString()).innerHTML = "Premium Item";
+        }else{document.getElementById("prime" + html.toString()).style.display = "none";
+        }};
+
 
 //We assign to html elements total bill price, the discounted price, and the shipping free info (if all elements are prime)
 
 document.getElementById("total-number").innerHTML = total.toFixed(2) + " €" ;
-document.getElementById("discount-total").innerHTML = "¡Precio con descuento! " + discountHtml() ;
+document.getElementById("discount-total").innerHTML = discountHtml() ;
 document.getElementById("prime-message").innerHTML = primeHtml() ;
 
 //We create function to show the discount price at the end, if there is discount
 
 function discountHtml(){
     if (total > 100){
-        return discountTotal.toFixed(2);
+        return "¡Precio con descuento! " + discountTotal.toFixed(2);
     }else{
         return "";
     }
 }
-
 //We create function to show message of shipping included according to condition of all items being prime
 
 function primeHtml(){
