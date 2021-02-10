@@ -75,7 +75,7 @@ showTotal(total);
 console.log("-------------------------------------")
 
 //    4    // Filtrar por los productos que sean prime.
-//We simply use the type of variable of Premium (true/false) to create a condition and then print
+//We simply use the type of variable of Premium (boolean) to create a condition and then print
 for (i = 0; i < carrito.length; i++) {
     if(carrito[i].premium){    
     imprimir (carrito[i]);}
@@ -126,11 +126,12 @@ showDiscount();
 
 //   7    // Show carrito through HTML
 
-//We relate the carrito properties with the DOM to show carrito in browser
+//We relate the carrito properties with the DOM tags to show carrito in browser
 
 for (i = 0; i < carrito.length; i++) {
     
-    var html = (i + 1).toString()
+    
+    var html = i + 1;
 
     document.getElementById("id" + html).innerHTML = "ID: (" + carrito[i].id + ")";
     document.getElementById("name" + html).innerHTML = carrito[i].name;
