@@ -30,13 +30,100 @@ Console.log (ciudades[ciuades.lenght]) es algo que no tiene sentido*/
 
 /*Basicamente se trata se trata de aumentar el índice en una unidad para continuar el siguiente elemento*/
 
-var ciudades = ["Madrid", "Barcelona", "Valencia", "Sevilla", "Bilbao"];
+function suma(a, b){
+    c = a + b;
+    return c
+}
+console.log(suma(1,2))
 
-for (i = 0; i < ciudades.length; i++){
-    console.log (ciudades[i]);
-};
 
 
+
+
+const carrito = [
+    {
+    id: 198752,
+    name: "Tinta DJ27 Color",
+    price: 52.95,
+    count: 3,
+    premium: true
+    },
+    {
+    id: 75621,
+    name: "Impresora ticketera PRO-201",
+    price: 32.75,
+    count: 2,
+    premium: true
+    },
+    {
+    id: 54657,
+    name: "Caja de rollos de papel para ticketera",
+    price: 5.95,
+    count: 3,
+    premium: false
+    },
+    {
+    id: 3143,
+    
+    }
+];
+
+
+   const numbers = [
+    {
+    id: 1000,
+    
+    },
+    {
+    id: 2000,
+    
+    },
+    {
+    id: 3000,
+    
+    },
+    {
+    id: 4000,
+   
+    }
+   ];
+
+function imprimir (product) {
+    for (properties in product){
+        console.log(properties + ": " + product[properties]);
+    }
+}
+
+for (i = 0; i < carrito.length; i++){
+    carrito[i].id = numbers[i].id;
+}
+for (product of carrito) {
+    console.log("----")
+    imprimir (product);
+}
+
+const hElements = [
+    {name: "h1", button: "button1"},
+    {name: "h2", button: "button2"},
+    {name: "h3", button: "button3"},
+    {name: "h4", button: "button4"}
+]; 
+
+
+
+
+
+function upId() {
+    for (i = 0; i < numbers.length; i++){
+        numbers[i].id += 1;
+    }
+}
+
+for ( i = 0; i < hElements.length; i++) {
+document.getElementById(hElements[i].button).addEventListener("click", upId);
+
+
+document.getElementById(hElements[i].name).innerHTML = numbers[i].id;}
 
 
 

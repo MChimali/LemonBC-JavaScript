@@ -130,8 +130,7 @@ showDiscount();
 
 for (i = 0; i < carrito.length; i++) {
     
-    
-    var html = i + 1;
+        var html = i + 1;
 
     document.getElementById("id" + html).innerHTML = "ID: (" + carrito[i].id + ")";
     document.getElementById("name" + html).innerHTML = carrito[i].name;
