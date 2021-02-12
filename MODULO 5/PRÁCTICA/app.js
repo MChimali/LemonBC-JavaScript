@@ -138,8 +138,8 @@ for (i = 0; i < carrito.length; i++) {
     document.getElementById("total" + html).innerHTML = (carrito[i].price*carrito[i].count).toFixed(2);
     document.getElementById("count" + html).value = carrito[i].count;
     if (carrito[i].premium){
-        document.getElementById("prime" + html.toString()).innerHTML = "Premium Item";
-        }else{document.getElementById("prime" + html.toString()).style.display = "none";
+        document.getElementById("prime" + html).innerHTML = "Premium Item";
+        }else{document.getElementById("prime" + html).style.display = "none";
         }};
 
 
