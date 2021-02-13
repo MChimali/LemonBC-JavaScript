@@ -84,7 +84,7 @@ function createDescription (i, main) {
     main.appendChild(span); 
 }
 
-//Function to create a input with the units (units shown on the array)
+//Function to create an input with the units (units shown on the array)
 function createInput (i, main) {
     var input = document.createElement("input");
     input.setAttribute("class", "product-unit");
