@@ -24,25 +24,27 @@ function totalUnits () {
     for (i = 0; i < products.length; i++){
         unitsTotal += parseInt(products[i].units);
     }
-    buttonMode (unitsTotal);
+    unitsTotal === 0 ? buttonDisabled () : buttonEnabled ();
 }
 
-/* Function to give response according to number of elements in shopping cart
-number of elements = 0 >> button disabled mode___Else>> button enabled mode*/
-function buttonMode (total) {
-if(total === 0){
+//number of elements = 0 >> button disabled mode
+//number of elements != 0 >> button enabled mode
+
+function buttonDisabled () {
     document.getElementById("mybutton").classList.add("error");
     document.getElementById("mybutton").disabled = true; // Disabled
     document.getElementById("mybutton").innerHTML = "¡Carrito vacío! Por favor, añada cantidades";
     document.getElementById("final-subtotal").innerText = "-";
     document.getElementById("final-VAT").innerText = "-";
     document.getElementById("final-price").innerText = "-";
- }else{
+};
+
+function buttonEnabled () {
     document.getElementById("mybutton").classList.remove("error");
     document.getElementById("mybutton").disabled = false; // Enabled
     document.getElementById("mybutton").innerHTML = "Calcular";
- }
-}
+};
+
 //Loop to go trough all items in the shopping cart, no matter how many
 for (i = 0; i < products.length; i++){
         createProductDiv(i);
@@ -89,6 +91,8 @@ function createInput (i, main) {
     var input = document.createElement("input");
     input.setAttribute("class", "product-unit");
     input.setAttribute("type", "number");
+    input.setAttribute("max", products[i].stock);
+    input.setAttribute("min", 0)
     input.setAttribute("value", products[i].units);
     input.addEventListener("change", event => changeValueInput (event.target.value, i));
     main.appendChild(input);
@@ -105,23 +109,24 @@ function changeValueInput(value, i) {
 }
 
 //Add event-listener on the button to call function to calculate the totals
-document.getElementById("mybutton").addEventListener("click", calculateTotal);
+document.getElementById("mybutton").addEventListener("click", () => showTotals (vatTotal(), subTotal()));
 
-//Function to calculate the totals
-function calculateTotal () {
-
-    var subTotal = 0;
-    var vatTotal = 0;
-    
-    for (i = 0; i < products.length; i++){
-        subTotal += products[i].price * products[i].units;
+//function to calculate subtotal
+function subTotal () {
+    var total = 0;
+    for (product of products){
+        total += product.price * product.units;
     }
+    return total;
+}
 
-    for (i = 0; i < products.length; i++){
-        vatTotal += products[i].price * products[i].units * products[i].tax / 100;
+//function to calculate vatTotal
+function vatTotal () {
+    var vat = 0;
+    for (product of products){
+        vat += product.price * product.units * product.tax / 100;
     }
-
-    showTotals (vatTotal, subTotal);
+    return vat;
 }
 
 //Function to show the totals
