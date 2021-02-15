@@ -65,7 +65,7 @@ on the products input and use to asign to units the new value
 >> Everytime we change any input we call the function buttonMode ()
 to re-evaluate if total amount of units = 0 >> button disabled / enabled */
 function changeValueInput(value, i) {
-  products[i].units = value;        
+  products[i].units = parseInt(value);        
   buttonMode ();
 }
 
@@ -76,7 +76,7 @@ buttonMode();
 function buttonMode () {
     var unitsTotal = 0;
     for (i = 0; i < products.length; i++){
-        unitsTotal += parseInt(products[i].units);
+        unitsTotal += products[i].units;
     }
     unitsTotal === 0 ? buttonDisabled () : buttonEnabled ();
 }
