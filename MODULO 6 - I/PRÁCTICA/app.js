@@ -16,10 +16,10 @@ const products = [
  
 ];
 
-//Function to calculate the total units within the shopping cart
-totalUnits();
+//Function to calculate the total units to evaluate if button is enabled or disabled
+buttonMode();
 
-function totalUnits () {
+function buttonMode () {
     var unitsTotal = 0;
     for (i = 0; i < products.length; i++){
         unitsTotal += parseInt(products[i].units);
@@ -101,11 +101,11 @@ function createInput (i, main) {
 /*
 >> Function that takes the event of the event-listener 
 on the products input and use to asign to units the new value
->> Everytime we change any input we call the function totalUnits ()
+>> Everytime we change any input we call the function buttonMode ()
 to re-evaluate if total amount of units = 0 >> button disabled / enabled */
 function changeValueInput(value, i) {
         products[i].units = value;        
-        totalUnits ();
+        buttonMode ();
 }
 
 //Add event-listener on the button to call function to calculate the totals
