@@ -1,3 +1,8 @@
+const range = 100 - 50 + 1;
+
+
+
+
 /* 
     
 var swap = (array, a, b) => {
