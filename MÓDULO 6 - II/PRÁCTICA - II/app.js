@@ -27,7 +27,7 @@ var encrypt = text => {
     var encryptedText = ""; 
 
     for (letter of text){
-        if (letter == " ")encryptedText += " ";
+        if (letter === " ")encryptedText += " ";
         else{       
         var index = alphabet.indexOf(letter);
         encryptedText += encryptedAlphabet[index];
@@ -43,7 +43,7 @@ var decrypt = text => {
     var decryptedText = ""; 
 
     for (letter of text){
-        if (letter == " ")decryptedText += " ";
+        if (letter === " ")decryptedText += " ";
         else{       
         var index = encryptedAlphabet.indexOf(letter);
         decryptedText += alphabet[index];
