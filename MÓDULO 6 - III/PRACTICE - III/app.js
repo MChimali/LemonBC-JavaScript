@@ -65,8 +65,7 @@ var showChange = array =>{
 var calculate = () => {
     var price = parseFloat(document.getElementById("Quantity-input").value);
     var moneyGiven = parseFloat(document.getElementById("payment-input").value);
-    change = Math.round((moneyGiven - price) * 100) / 100;
-    change = Math.round(change * 100) / 100;  
+    change = Math.round((moneyGiven - price) * 100) / 100;     
     calculateChange(change)
     console.log("Cambio total de " + change)
     showChange(changeOptions);
