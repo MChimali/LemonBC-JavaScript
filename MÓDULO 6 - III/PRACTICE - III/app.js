@@ -37,8 +37,6 @@ var calculateChange = change =>{
         i++
     }        
 }
-
-
 //create a function to show through console the diferent options
 var showConsole = (i, array, field1, field2) =>{
     console.log(array[i].number + " " + field1 + " " + array[i].amount +  " " + field2)
@@ -72,22 +70,3 @@ var calculate = () => {
 }
 //create eventListener
 document.getElementById("mybutton").addEventListener("click", calculate);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
