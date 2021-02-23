@@ -17,7 +17,7 @@ var changeOptions = [
 ];
 //create function to decrease to zero the change, taking full integers
 var calculateChange = change =>{
-     i = 0    
+    var i = 0;  
     while (change > 0){
         var fullCoin = Math.floor(change / changeOptions[i].amount);        
         if (fullCoin > 0){
