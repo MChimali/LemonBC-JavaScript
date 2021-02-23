@@ -1,23 +1,23 @@
 //create array to locate the notes/coins options and to store the amount of coins for the change
 var changeOptions = [
-    { amount: 200, number: 0, available: 2},//0
-    { amount: 100, number: 0, available: 2},//1
-    { amount: 50, number: 0, available: 2},//2
-    { amount: 20, number: 0, available: 2},//3
+    { amount: 200, number: 0, available: 0},//0
+    { amount: 100, number: 0, available: 0},//1
+    { amount: 50, number: 0, available: 0},//2
+    { amount: 20, number: 0, available: 0},//3
     { amount: 10, number: 0, available: 0},//4
-    { amount: 5, number: 0, available: 3},//5
-    { amount: 2, number: 0, available: 2},//6
-    { amount: 1, number: 0, available: 100},//7
-    { amount: 0.5, number: 0, available: 5},//8
-    { amount: 0.2, number: 0, available: 5},//9
-    { amount: 0.1, number: 0, available: 5},//10
-    { amount: 0.05, number: 0, available: 5},//11
-    { amount: 0.02, number: 0, available: 5},//12
-    { amount: 0.01, number: 0, available: 5}, //13   
+    { amount: 5, number: 0, available: 0},//5
+    { amount: 2, number: 0, available: 0},//6
+    { amount: 1, number: 0, available: 0},//7
+    { amount: 0.5, number: 0, available: 0},//8
+    { amount: 0.2, number: 0, available: 0},//9
+    { amount: 0.1, number: 0, available: 0},//10
+    { amount: 0.05, number: 0, available: 0},//11
+    { amount: 0.02, number: 0, available: 0},//12
+    { amount: 0.01, number: 0, available: 0}, //13   
 ];
 //create function to decrease to zero the change, taking full integers
 var calculateChange = change =>{
-     i = 0    
+    var i = 0; 
     while (change > 0){
         var fullCoin = Math.floor(change / changeOptions[i].amount);        
         if (fullCoin > 0){
@@ -33,6 +33,7 @@ var calculateChange = change =>{
         }
         change = Math.round(change * 100) / 100;
         i++
+        if(i > 13) return console.log("no tiene suficiente cambio")
     }        
 }
 //create a function to show through console the diferent options
@@ -61,9 +62,9 @@ var showChange = array =>{
 var calculate = () => {
     var price = parseFloat(document.getElementById("Quantity-input").value);
     var moneyGiven = parseFloat(document.getElementById("payment-input").value);
-    change = Math.round((moneyGiven - price) * 100) / 100;     
-    calculateChange(change)
-    console.log("Cambio total de " + change + " euros")
+    change = Math.round((moneyGiven - price) * 100) / 100; 
+    console.log("Cambio total de " + change + " euros")    
+    calculateChange(change);    
     showChange(changeOptions);
 }
 //create eventListener
