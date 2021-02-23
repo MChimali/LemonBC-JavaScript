@@ -33,7 +33,7 @@ var calculateChange = change =>{
         }
         change = Math.round(change * 100) / 100;
         i++
-        if(i > 13) return console.log("no tiene suficiente cambio")
+        if(i > changeOptions.length) return console.log("no tiene suficiente cambio")
     }        
 }
 //create a function to show through console the diferent options
