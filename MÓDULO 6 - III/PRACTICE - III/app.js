@@ -68,22 +68,3 @@ var calculate = () => {
 }
 //create eventListener
 document.getElementById("mybutton").addEventListener("click", calculate);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
