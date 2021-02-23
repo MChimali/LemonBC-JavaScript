@@ -1,12 +1,12 @@
 //create array to locate the notes/coins options and to store the amount of coins for the change
 var changeOptions = [
-    { amount: 200, number: 0, available: 0},//0
-    { amount: 100, number: 0, available: 0},//1
-    { amount: 50, number: 0, available: 0},//2
-    { amount: 20, number: 0, available: 0},//3
+    { amount: 200, number: 0, available: 2},//0
+    { amount: 100, number: 0, available: 2},//1
+    { amount: 50, number: 0, available: 2},//2
+    { amount: 20, number: 0, available: 2},//3
     { amount: 10, number: 0, available: 0},//4
-    { amount: 5, number: 0, available: 2},//5
-    { amount: 2, number: 0, available: 0},//6
+    { amount: 5, number: 0, available: 3},//5
+    { amount: 2, number: 0, available: 2},//6
     { amount: 1, number: 0, available: 100},//7
     { amount: 0.5, number: 0, available: 5},//8
     { amount: 0.2, number: 0, available: 5},//9
@@ -19,26 +19,22 @@ var changeOptions = [
 var calculateChange = change =>{
      i = 0    
     while (change > 0){
-        var fullCoin = Math.floor(change / changeOptions[i].amount);
-        console.log(fullCoin);
+        var fullCoin = Math.floor(change / changeOptions[i].amount);        
         if (fullCoin > 0){
             if(fullCoin >= changeOptions[i].available){
                 changeOptions[i].number = changeOptions[i].available;
                 change -= changeOptions[i].amount * changeOptions[i].number;
-                changeOptions[i].available = 0;
-                change = Math.round(change * 100) / 100;    
+                changeOptions[i].available = 0;                    
             }else{
                 changeOptions[i].available -= fullCoin;
                 changeOptions[i].number = fullCoin;
-                change -= changeOptions[i].amount * fullCoin;
-                change = Math.round(change * 100) / 100;                
+                change -= changeOptions[i].amount * fullCoin;                                
             }
         }
+        change = Math.round(change * 100) / 100;
         i++
     }        
 }
-
-
 //create a function to show through console the diferent options
 var showConsole = (i, array, field1, field2) =>{
     console.log(array[i].number + " " + field1 + " " + array[i].amount +  " " + field2)
@@ -65,10 +61,9 @@ var showChange = array =>{
 var calculate = () => {
     var price = parseFloat(document.getElementById("Quantity-input").value);
     var moneyGiven = parseFloat(document.getElementById("payment-input").value);
-    change = Math.round((moneyGiven - price) * 100) / 100;
-    change = Math.round(change * 100) / 100;  
+    change = Math.round((moneyGiven - price) * 100) / 100;     
     calculateChange(change)
-    console.log("Cambio total de " + change)
+    console.log("Cambio total de " + change + " euros")
     showChange(changeOptions);
 }
 //create eventListener
