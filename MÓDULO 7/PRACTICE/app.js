@@ -16,9 +16,9 @@ console.log(patternCase2.test(iban2));
 var ibanArray = ["ES66 0019 0020 9612 3456 7890", "DE70 0019 0020 9612 3456 7890", "FR12 0019 0020 9612 3456 7890"]
 
 for (iban of ibanArray){
-    if(patternCase2.test(iban)){//validates IBAN
+    patternCase2.test(iban)//validates IBAN
     console.log((patternCase2.exec(iban))[1]);//Once IBAN is validated >> console.log codes   
-}}
+}
 
 
 console.log("-------Reg Number exercise---------")
@@ -29,17 +29,13 @@ var carReg = ["2021 GMD", "2345-GMD", "4532BDB", "0320-AAA"];
 const patternReg = /^(\d{4})[ -]?([A-Z]{3})$/;
 
 let number = 1;
-
 for (regNumber of carReg){    
-    if(patternReg.test(regNumber)){
+        console.log(patternReg.test(regNumber))
         console.log("Plate " + number)
         var regInArray = patternReg.exec(regNumber);
         console.log("Plate Number: " + regInArray[1]);
-        console.log("Plate Letters: " + regInArray[2]);
-        
-    }else{
-        console.log("Plate " + number + " is not valid");
-    }   
+        console.log("Plate Letters: " + regInArray[2]);       
+ 
     number++
 }
 
@@ -47,21 +43,14 @@ console.log("-------Extract Images from HTML---------")
 //Extract images from a HTML file
 
 /////////// 1st WAY //////////////
+
 var htmlString = document.documentElement.innerHTML;
 
 var getImages = string => {
-    const pattern = /img\n*?\s*?src="(.*)"/g;
-    const pattern2 = /img\n*?\s*?src="(.*)"/;
-    const array = string.match(pattern);
-    const images = [];
-    for (i = 0; i < array.length; i++){        
-        images.push(array[i].match(pattern2)[1]);
-        
-    }
-    return images
+    const pattern = /(?<=img\n*?\s*?src=").*(?=")/g;
+    console.log(string.match(pattern));  
 }
-
-console.log(getImages(htmlString));
+getImages(htmlString);
 
 /////////// 2nd WAY //////////////
 
@@ -125,11 +114,6 @@ function validateURL () {
     const patternURL = /^(https:\/\/)?(www\.)?(\w+)(.net|.com|.es|.org)$/;
     console.log(patternURL.test(URL));    
 }
-
-
-
-
-
 
 
 
