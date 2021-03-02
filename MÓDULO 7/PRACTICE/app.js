@@ -75,7 +75,7 @@ var getCreditCard = () => document.getElementById("input-card").value;
 function validateCardNumber () {
     var number = getCreditCard();    
     const fourDigits = /^\d{4}$/;
-    const cardPattern = /^((?:(?:50)|(?:51)|(?:52)|(?:53)|(?:54)|(?:55))\d{2})\s?-?(\d{4})\s?-?(\d{4})\s?-?(\d{4})$/
+    const cardPattern = /^((?:(?:50)|(?:51)|(?:52)|(?:53)|(?:54)|(?:55))\d{2})(\s?-?(\d{4})){3}$/
     console.log(cardPattern.test(number));
     var array = cardPattern.exec(number);
     console.log(array)
