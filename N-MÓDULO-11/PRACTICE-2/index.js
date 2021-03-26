@@ -1,7 +1,7 @@
 const reservas = [
-    {hab: "standard", pax: 1, noches: 3},
-    {hab: "standard", pax: 1, noches: 4},
-    {hab: "suite", pax: 2, noches: 1}
+    {hab: "standard", pax: 1, nights: 3, breakfast: true},
+    {hab: "standard", pax: 1, nights: 4, breakfast: false},
+    {hab: "suite", pax: 2, nights: 1, breakfast: false}
   ];
 
 class bookingMain{
@@ -24,13 +24,17 @@ class bookingMain{
         }
     }
     
+    breakfastCost(nights, pax, breakfast){
+        return (breakfast? nights * pax * 15 : 0 )
+    }
+
     calculateExtra (guests, nights){        
         return (guests > 1? (guests - 1) * nights * 40 : 0);      
     }
 
     calculateSubtotal() {               
-        this._subtotal = this._booking.reduce((acumulado, {hab, pax, noches})=>
-        acumulado + this.calculateHabPrice(hab) * noches + this.calculateExtra(pax, noches), 0) 
+        this._subtotal = this._booking.reduce((acumulado, {hab, pax, nights, breakfast})=>
+        acumulado + this.calculateHabPrice(hab) * nights + this.calculateExtra(pax, nights) + this.breakfastCost(nights, pax, breakfast), 0) 
                
     }    
 
