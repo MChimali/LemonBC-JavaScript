@@ -4,7 +4,7 @@ const reservas = [
     {hab: "suite", pax: 2, nights: 1, breakfast: false}
   ];
 
-class bookingMain{
+class BookingMain{
     constructor(standardPrice, suitePrice, discount){
         this._booking = [];
         this._subtotal = 0;
@@ -66,19 +66,19 @@ class bookingMain{
     }   
 }
 
-class bookingClient extends bookingMain{
+class BookingClient extends BookingMain{
     constructor(){
         super(100, 150, 0)
     }
 }
 
-class bookingOperator extends bookingMain{
+class BookingOperator extends BookingMain{
     constructor(){
         super(100, 100, 15)        
     }
 }
 
-const client = new bookingClient;
+const client = new BookingClient;
 client.booking = reservas;
 console.log(client.subtotal);
 console.log(client.totalDiscounted);
@@ -86,7 +86,7 @@ console.log(client.totalWithVat);
 
 console.log("----")
 
-const operator = new bookingOperator;
+const operator = new BookingOperator;
 operator.booking = reservas;
 console.log(operator.subtotal);
 console.log(operator.totalDiscounted);

@@ -16,7 +16,7 @@ const reservas = [
     }
 ];
 
-class totalCharge {
+class TotalCharge {
     constructor() {
         this._booking = [];
         this._subtotal = 0;
@@ -60,14 +60,14 @@ class totalCharge {
     }
 }
 
-const newBooking = new totalCharge();
+const newBooking = new TotalCharge();
 newBooking.booking = reservas;
 console.log(newBooking.subtotal)
 console.log(newBooking.total)
 
 console.log("---")
 
-class TourOperator extends totalCharge{
+class TourOperator extends TotalCharge{
     constructor() {
         super();
         this._totalWithDisc = 0;
